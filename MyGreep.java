@@ -60,7 +60,7 @@ public class MyGreep extends Greep
     public void act()
     {
         super.act();   // do not delete! leave as first statement in act().
-        if (carryingTomato()) {
+        /*if (carryingTomato()) {
             if(atShip()) {
                 dropTomato();
             }
@@ -73,6 +73,32 @@ public class MyGreep extends Greep
             randomWalk();
             checkFood();
         }
+        */
+        // This is a basic outline of how we COULD solve the problem.
+        //Refer to Greep.java for all of the things that a greep can do
+        if we are carrying a tomato
+            if we can see home
+                if we are at home
+                    drop the tomato
+                else
+                    go home
+            else
+                move in a random direction until we can
+        else
+            if can see tomato
+                go to tomatos
+            else if we are touching a tomato
+                maybe try to broadcast this to other greeps so that they can pick them up?
+                pick up the tomato
+                while we can't see home
+                    move in a random direction until we can
+                go home
+            else
+                if we are touching a wall
+                    move away from the wall at an angle
+                else 
+                    move forwards a bit
+            
     }
     
     /** 
