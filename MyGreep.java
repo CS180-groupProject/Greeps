@@ -1,8 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, and Greenfoot)
-<<<<<<< HEAD
 import java.util.List;
-=======
->>>>>>> ed832b99e50c992465b8ab937477248823eb0b72
 
 /**
  * A Greep is an alien creature that likes to collect tomatoes.
@@ -72,11 +69,8 @@ public class MyGreep extends Greep
     // Remember: you cannot extend the Greep's memory. So:
     // no additional fields (other than final fields) allowed in this class!
     
-<<<<<<< HEAD
     private static final int TOMATO_LOCATION_KNOWN = 1;
     
-=======
->>>>>>> ed832b99e50c992465b8ab937477248823eb0b72
     /**
      * Default constructor. Do not remove.
      */
@@ -90,7 +84,6 @@ public class MyGreep extends Greep
      */
     public void act()
     {
-<<<<<<< HEAD
         super.act();   // do not delete! leave as first statement in act().        
 
         // Before moving, lets check for food.
@@ -144,7 +137,6 @@ public class MyGreep extends Greep
             setMemory(1, tomatoes.getX());
             setMemory(2, tomatoes.getY());
         }
-=======
         super.act();   // do not delete! leave as first statement in act().
         /*if (carryingTomato()) {
             if(atShip()) {
@@ -162,40 +154,15 @@ public class MyGreep extends Greep
         */
         // This is a basic outline of how we COULD solve the problem.
         //Refer to Greep.java for all of the things that a greep can do
-        if we are carrying a tomato
-            if we can see home
-                if we are at home
-                    drop the tomato
-                else
-                    go home
-            else
-                move in a random direction until we can
-        else
-            if can see tomato
-                go to tomatos
-            else if we are touching a tomato
-                maybe try to broadcast this to other greeps so that they can pick them up?
-                pick up the tomato
-                while we can't see home
-                    move in a random direction until we can
-                go home
-            else
-                if we are touching a wall
-                    move away from the wall at an angle
-                else 
-                    move forwards a bit
-            
->>>>>>> ed832b99e50c992465b8ab937477248823eb0b72
+       
     }
     
     /** 
      * Move forward, with a slight chance of turning randomly
      */
-<<<<<<< HEAD
-    private void randomWalk()
-=======
+
+    
     public void randomWalk()
->>>>>>> ed832b99e50c992465b8ab937477248823eb0b72
     {
         // there's a 3% chance that we randomly turn a little off course
         if (randomChance(3)) {
@@ -204,7 +171,6 @@ public class MyGreep extends Greep
         
         move();
     }
-<<<<<<< HEAD
     private void walkAvoidWater(){
         
 }
@@ -255,21 +221,11 @@ public class MyGreep extends Greep
     {
         return "Gr33p";
     }    
-=======
+
 
     /**
      * Is there any food here where we are? If so, try to load some!
      */
-    public void checkFood()
-    {
-        // check whether there's a tomato pile here
-        TomatoPile tomatoes = getTomatoes();
-        if(tomatoes != null) {
-            loadTomato();
-            // Note: this attempts to load a tomato onto *another* Greep. It won't
-            // do anything if we are alone here.
-        }
-    }
 
     /**
      * This method specifies the name of the greeps (for display on the result board).
@@ -279,5 +235,4 @@ public class MyGreep extends Greep
     {
         return "Your name here";  // write your name here!
     }
->>>>>>> ed832b99e50c992465b8ab937477248823eb0b72
 }
